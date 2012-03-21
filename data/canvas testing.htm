@@ -1,0 +1,86 @@
+<html>
+<link rel="stylesheet" type="text/css" href="nustyle.css"/>
+<script type="text/javascript">
+var rem=0;
+var store="NULL";
+var str;
+var i=0;
+var x=450,y=100;
+
+
+function youRect(context,sx,sy,parx,pary,txt){
+        context.strokeStyle = "white";
+        context.lineWidth=2;
+        context.beginPath();
+        context.moveTo(sx,sy);
+        context.lineTo(parx,pary);
+        context.stroke();
+        
+        context.font = "20pt Arial";
+        context.textalign = "center";
+        //Draws a rectangle keeping x,y as middle and line to parx,pary
+        var gradient = context.createLinearGradient(x,y-25,x,y+85);
+        
+		gradient.addColorStop(0, '#0F3B5F');
+        gradient.addColorStop(1, '#6699FF');
+        
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 0;
+		context.shadowBlur = 10;
+		context.shadowColor = '#000';
+        
+        context.fillStyle = gradient;                    
+        context.fillRect(x-100,y-20, 200, 30);
+        
+        context.fillStyle = "white";
+        context.font = "15px Arial";
+        context.textAlign = "center";
+        context.fillText(txt, x, y,190);
+                
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 0;
+		context.shadowBlur = 0;
+		context.shadowColor = '#6699FF';
+       
+}
+
+//#986559
+window.onload = function draw(a,b) {
+var c = document.getElementById("cavId");
+var context = c.getContext("2d");
+    cxt=context;
+	var q;
+	a="Youtube!";
+	q=a;
+	if(q!=store)
+	{	
+    
+	x=x;
+	y=y+160;	
+         youRect(cxt,x,y,0,0,a);
+
+	}
+	if(q==store)
+	{
+	if(rem==0)
+	{	
+	x=x-100;
+	y=y-40;
+	}
+    	 youRect(cxt,x,y,0,0,a);
+	}
+	store=a;
+	
+	
+        }
+</script>
+<body>
+<h1>youFire
+<small> alpha release (C) Rishab Arora, Sahil Singh</small>
+ </h2>
+<canvas id="cavId" width="1000" height="2000">
+Your browser does not support the canvas element.
+</canvas>
+
+</body>
+</html> 

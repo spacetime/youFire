@@ -1,0 +1,20 @@
+/* BASIC RESET */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,macbook,p,blockquote,fieldset,input{margin:0; padding:0;}
+
+/* HTML ELEMENTS */
+body { background: -moz-radial-gradient(#6699FF,#003399); background: -webkit-gradient(radial, center center,10,center center,1000, from(#6699FF), to(#003399)); color:#6699FF; background-color:#151f23; }
+h1 { font: bold 50px Helvetica, Arial, Sans-serif; text-align: center; color: #eee; text-shadow: 0px 2px 6px #000; }
+h1 small{ font-size: 10px; text-transform:uppercase; letter-spacing: 5px; display: block; color: #ccc; margin-top:10px; }
+h2 a { display: block; text-decoration: none; margin: 0 0 30px 0; font: italic 40px Georgia, Times, Serif;  text-align: center; color: #FFF; text-shadow: 0px 2px 6px #333; }
+h2 a:hover { color: #90bcd0; }
+
+/* COMMON CLASSES */
+.break { clear:both; }
+
+/* WRAPPER */
+#wrapper { width:800px; margin:40px auto; }
+
+/* CONTENT */
+#content { }
+#content h2 { font: bold 30px Helvetica, Arial, Sans-serif; color:#ccc; text-shadow: 0px 2px 6px #ccc; margin-left:400px; padding-top:20px; }
+
